@@ -43,6 +43,7 @@ iframe {
     border: none;
 }
 header{
+    position: static;
     display: flex;
     flex-direction: column;
     align-items:flex-start;
@@ -107,7 +108,7 @@ html {
     
 }
 .fstLine{
-    position: static;
+    position: sticky;
     top: 0;  
     z-index: 100;
     display: flex;
