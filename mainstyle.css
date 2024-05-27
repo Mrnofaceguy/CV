@@ -111,12 +111,13 @@ html {
 }
 .fstLine{
     position: sticky;
+    top: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
-   
 }
+
 .thin{
     margin: 1px;
     border-radius: 0%;

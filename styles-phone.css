@@ -44,12 +44,14 @@ iframe {
 }
 header{
     position: static;
+    margin-bottom: 1px;
+    top: 0;
+    z-index: 100;
     display: flex;
     flex-direction: column;
     align-items:flex-start;
     justify-content: flex-start;
-    height:  10vh;
-
+    height: auto;
     width: 100%;    
 }
 
@@ -108,7 +110,6 @@ html {
     
 }
 .fstLine{
-    position: sticky;
     top: 0;  
     z-index: 100;
     display: flex;
@@ -117,6 +118,7 @@ html {
     width: 100%;
    
 }
+
 .thin{
     margin: 1px;
     border-radius: 0%;
