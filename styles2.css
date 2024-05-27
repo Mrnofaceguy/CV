@@ -1,0 +1,96 @@
+*{
+    border: 0;
+    font-family: "VT323", monospace;
+    margin: 0;
+    color: chartreuse;
+    cursor: url(000.png), auto;
+    -webkit-animation: cursor 1.5s infinite;
+    animation: cursor 1.5s infinite;
+}
+   
+
+body{
+
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(65, 65, 65, 1);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}  
+@-webkit-keyframes cursor {
+    0% {cursor: url(000.png), auto;}
+    25% {cursor: url(006.png), auto;}
+    50% {cursor: url(012.png), auto;}
+    75% {cursor: url(018.png), auto;}
+    100% {cursor: url(026.png), auto;}
+}
+@keyframes cursor {
+    0% {cursor: url(000.png), auto;}
+    25% {cursor: url(006.png), auto;}
+    50% {cursor: url(012.png), auto;}
+    75% {cursor: url(018.png), auto;}
+    100% {cursor: url(026.png), auto;}
+}
+#contentor-titulo{
+    display: flex;
+    justify-content: space-between;
+    width: 95.3vw;
+    background-color: rgba(25, 65, 6, 1);
+    margin-bottom: 5px;
+
+}
+#titulo{
+    display: flex;
+    justify-content: flex-start;
+    padding: 2vh;
+    margin-bottom: 1vh;
+    align-items: center;
+} 
+#contentor-butoes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 135px;
+    margin-right: 2vw;
+}
+#butoes-esquerda{
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.icon-butao{
+    width: 32px;
+    height: 32px;
+}
+.butao{
+    background-color: rgba(65, 65, 65, 1);
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+}
+h1{
+    text-decoration: none;
+    font-family: "Jersey 15", sans-serif;
+    font-weight: normal;
+    font-size: 5vh;
+    color:  black;
+}
+#content{
+    background-color:rgba(3, 33, 6, 1);
+    height: 80vh;
+    width: 95vw;
+}
+#pfp{
+    border-radius: 5%;
+    height: 6vh;
+    margin: 5px;
+    border-width: 2px;
+    border-color: chartreuse;
+}

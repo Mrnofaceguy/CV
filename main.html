@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Play:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('emailLink').addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default mailto behavior
+                window.open('mailto:email@example.com', '_blank');
+            });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    const offset = 50; // Adjust this value to match your header's height
+
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+
+        function downloadPDF() {
+            const link = document.createElement('a');
+            link.href = 'CV Bruno.pdf';
+            link.download = 'CV Bruno.pdf';
+            document.body.appendChild(link); // Append the link to the body
+            link.click();
+            document.body.removeChild(link);
+        }
+
+    </script>
+
+    <link rel="stylesheet" href="mainstyle.css">
+
+    <title>CV Bruno main</title>
+</head>
+<body>
+    <object type="text/html" data="animation.html" style="width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: -1;"></object>
+
+    <header>
+        <div class="fstLine">
+            <h1 class="titulo">CV Bruno Almeida</h1>
+            <button class="download-button" onclick="downloadPDF()">Download PDF</button>
+        </div>
+        <div class="navbar">
+            <div class="navbeacon"><a href="#cont" class="button">Contactos</a></div>
+            <div class="navbeacon"><a href="#edu" class="button">Educação</a></div>
+            <div class="navbeacon"><a href="#exppro" class="button">Experiência profissional</a></div>
+            <div class="navbeacon"><a href="#comp" class="button">Competências</a></div>
+            <div class="navbeacon"><a href="#info" class="button">Outras informações</a></div>
+        </div>
+        <hr>
+    </header>
+
+    <div id="cont" class="section">
+        <h1>Contactos</h1>
+        <img src="Imagem1.png" class="pfp"> 
+        <div>
+            <p><b>Data de nascimento:</b> 25/06/1999 <b>Nacionalidade:</b> Portuguesa <br>
+            <b>Sexo:</b> Masculino <b>Número de telemóvel:</b> (+351) 915677251 (Telemóvel)<br>
+            <b>Endereço de email:</b> 
+            <a href="mailto:brunoalmeida25399@gmail.com" id="emailLink">brunoalmeida25399@gmail.com</a></p>
+            <br>
+            <p><b>Endereço:</b> rua de castelhaes, 593, 4410-079, Vila Nova de Gaia, Portugal (Casa)</p>
+        </div>
+    </div>
+
+    <div id="edu" class="section">
+        <h1>Educação</h1>
+        <h3> 29/01/2020 -> 13/04/2022 Porto, Portugal<br>CURSO DE HELPDESK / SUPORTE TÉCNICO Master D</h3>
+        <p>Endereço Rua de Camões, 497/501, 4000-147, Porto, Portugal <br>
+        Sítio Web https://www.masterd.pt/<br>
+        Área de estudo: Tecnologias da informação e comunicação (TIC) <br>
+        Design e administração de bases de dados e de redes informáticas <br></p>
+        <h4>Classificação final 18/20</h4>
+    </div>
+
+    <div id="exppro" class="section">
+        <h1>Experiência Profissional</h1>
+        <h3>31/01/2022 -> 13/04/2022 Vila Nova de Gaia, Portugal<br>ESTÁGIO DE HELPDESK MCOUTINHO</h3>
+        <p>• Pedidos de RMA<br>• Diagnóstico de máquinas<br>• Verificação de pontos de rede<br>
+        • Preparação de computadores para uso por outros colaboradores<br>• Preparação de um par de Raspberry Pi para painéis informativos <br>
+        • Manutenção GLPI (sistema de inventário)<br>• Resolução de bilhetes de helpdesk<br>• Várias instalações na Mcoutinho Aveiro<br>
+        • Configurações de scanners<br></p>
+        <hr class="thin">
+        <h3>01/08/2022 -> 31/10/2022 Porto, Portugal<br>ESTÁGIO DE HELPDESK SANTA CASA DA MISERICÓRDIA</h3>
+        <p>• Troca de toners e outros consumíveis necessários à utilização de impressoras <br>• Resolução de conflitos de software e hardware <br>
+        • Troca de hardware <br>• Upgrades a equipamento pré-existente <br></p>
+        <hr class="thin">
+        <h3>17/04/2023 -> 29/12/2023 Porto, Portugal<br>SUPORTE TÉCNICO E-LABEL SYMINGTON FAMILY ESTATES</h3>
+        <p>• Organização e agregação de dados a ser carregados na plataforma de rótulos digitais. <br>• Carregamento dos dados na plataforma <br>
+        • Agregação de dados para clientes <br>• Edição de imagens leve. <br></p>
+        <hr>
+    </div>
+
+    <div id="comp" class="section">
+        <h1>Competências</h1>
+        <h2>Competências Linguísticas</h2>
+        <p><b>Português</b> nativo <br><b>Inglês</b>  nível C1</p>
+        <h2>Competências Digitais</h2>
+        <p>Microsoft Office PowerPoint | Google | Gmail | Microsoft Office Word | Utilização da Internet como ferramenta de comunicação, investigação e pesquisa | Facilidade de Aprendizagem de Novos Softwares | Whatsapp | Windows em geral | Microsoft Office Excel | Estabelecimento de Comunicação Online como Skype e Zoom | Conhecimentos de Informática | Conhecimentos informáticos na óptica do utilizador</p>
+        <h2>Carta de Condução</h2> 
+        <p>B</p>
+        <hr class="thin">
+    </div>
+
+    <div id="info" class="section">
+        <h1>Outras Informações</h1>
+        <h3>Ensino Superior</h3>
+        <p>01/07/2017 – ATUAL<br>Licenciatura em Engenharia Informática e Computação<br>Conhecimentos básicos de programação em Java e C</p>
+        <p>Percussão 1º ao 5º grau de percussão na Academia de música de Vilar do Paraíso</p>
+    </div>
+</body>
+</html>
