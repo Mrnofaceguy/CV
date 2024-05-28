@@ -1,9 +1,27 @@
 *{
-    background-color: rgba(3, 1, 17, 1);
     margin: 0;
     font-family: 'M PLUS Rounded 1c';
     padding: 0px;
     
+}
+canvas{
+    
+    z-index: -1;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    width: auto;
+    display: block;
+}
+#scene{
+    width: 50vw ;
+}
+
+body{
+    margin: 0;
+    background-color: rgba(44, 17, 214, 0.596);
+    position: relative;
+    z-index: 1;
 }
 
 object {
@@ -14,10 +32,7 @@ object {
     left: 0;
     z-index: -1;
 }
-body{
-    background-color: rgba(3, 1, 17, 1);
-    position: relative;
-}
+
 .navbeacon{
     color: #444444;
     transition: color 0.5s ease;

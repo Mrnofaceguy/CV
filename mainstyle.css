@@ -1,5 +1,4 @@
 *{
-    background-color: rgba(3, 1, 17, 1);
     margin: 0;
     font-family: 'M PLUS Rounded 1c';
     padding: 0px;
@@ -14,9 +13,24 @@ object {
     left: 0;
     z-index: -1;
 }
+canvas{
+    
+    z-index: -1;
+    position: sticky;
+    top: 39px;
+    overflow: hidden;
+    width: auto;
+    display: block;
+}
+#scene{
+    width: 50vw ;
+}
+
 body{
-    background-color: rgba(3, 1, 17, 1);
+    margin: 0;
+    background-color: rgba(44, 17, 214, 0.596);
     position: relative;
+    z-index: 1;
 }
 .navbeacon{
     color: #444444;
@@ -43,6 +57,7 @@ iframe {
     border: none;
 }
 header{
+    background-color: rgb(3, 1, 17);
     position: sticky;
     top: 0;  
     z-index: 100;
@@ -55,6 +70,7 @@ header{
     width: 100%;    
 }
 .navbar{
+    background-color: rgb(3, 1, 17);
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -110,6 +126,7 @@ html {
     
 }
 .fstLine{
+    background-color: rgb(3, 1, 17);
     position: sticky;
     top: 0;
     display: flex;
@@ -150,7 +167,7 @@ a{
     align-items: center;
     padding-bottom: 5vh;
 }
-p{
+p{    
     padding-left: 2vw;
     color: #777f83 ;
 }
