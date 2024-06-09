@@ -10,6 +10,7 @@
 
     
     <script>
+        
         document.addEventListener('DOMContentLoaded', function() {
             // Scroll to the "Contactos" section, leaving some space for the header
             const contactSection = document.getElementById('cont');
@@ -67,7 +68,15 @@
     <header>
         <div class="fstLine">
             <h1 class="titulo">CV Bruno Almeida</h1>
-            <button class="download-button" onclick="downloadPDF()">Download PDF</button>
+            <div class="right">
+                <label for="dropdown"></label>
+                <select id="dropdown">
+                    <option value="pt">Português</option>
+                    <option value="en">English</option>
+                </select>       
+            
+                <button class="download-button" onclick="downloadPDF()">Download PDF</button>
+        </div>
         </div>
         <div class="navbar">
             <div class="navbeacon"><a href="#cont" class="button">Contactos</a></div>
@@ -102,7 +111,7 @@
             side: THREE.DoubleSide,
             blending: THREE.AdditiveBlending,
             transparent: true,
-            opacity: 0.7
+            opacity: 0.5
         });
 
         // Create glowing orb geometry
@@ -206,7 +215,7 @@
         <h3>17/04/2023 -> 29/12/2023 Porto, Portugal<br>SUPORTE TÉCNICO E-LABEL SYMINGTON FAMILY ESTATES</h3>
         <p>• Organização e agregação de dados a ser carregados na plataforma de rótulos digitais. <br>• Carregamento dos dados na plataforma <br>
         • Agregação de dados para clientes <br>• Edição de imagens leve. <br></p>
-        <hr>
+        
     </div>
 
     <div id="comp" class="section">
@@ -217,7 +226,7 @@
         <p>Microsoft Office PowerPoint | Google | Gmail | Microsoft Office Word | Utilização da Internet como ferramenta de comunicação, investigação e pesquisa | Facilidade de Aprendizagem de Novos Softwares | Whatsapp | Windows em geral | Microsoft Office Excel | Estabelecimento de Comunicação Online como Skype e Zoom | Conhecimentos de Informática | Conhecimentos informáticos na óptica do utilizador</p>
         <h2>Carta de Condução</h2> 
         <p>B</p>
-        <hr class="thin">
+        
     </div>
 
     <div id="info" class="section">
