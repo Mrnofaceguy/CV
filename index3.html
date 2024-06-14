@@ -14,7 +14,7 @@
     <title>CV Bruno Almeida</title>
 </head>
 <body>
-    <object type="text/html" data="background.html" style="width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: -1;"></object>
+    <object type="text/html" data="animation.html" style="width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: -1;"></object>
     
     <header>
         <div class="fstLine">
@@ -50,7 +50,7 @@
                 <a href="mailto:brunoalmeida25399@gmail.com" id="emailLink">brunoalmeida25399@gmail.com</a>
             </p>
             <br>
-            <p><b data-en="Address:" data-pt="Endereço:">Endereço:</b> rua de castelhaes, 593, 4410-079, Vila Nova de Gaia, Portugal </p>
+            <p><b data-en="Address:" data-pt="Endereço:">Endereço:</b> rua de castelhaes, 593, 4410-079, Vila Nova de Gaia, Portugal (Casa)</p>
         </div>
     </div>
 
@@ -132,16 +132,11 @@
         }
 
         // Change language function
-        // Change language function
-    function changeLanguage(language) {
-        document.querySelectorAll('[data-' + language + ']').forEach(element => {
-            let text = element.getAttribute('data-' + language);
-        // Replace '\n' with '<br>' to ensure line breaks are respected
-            text = text.replace(/\n/g, '<br>');
-            element.innerHTML = text;
-        });
-    }   
-
+        function changeLanguage(language) {
+            document.querySelectorAll('[data-' + language + ']').forEach(element => {
+                element.textContent = element.getAttribute('data-' + language);
+            });
+        }
 
         // Language selection event listener
         document.getElementById('langSelect').addEventListener('change', function() {
