@@ -3,6 +3,9 @@
     font-family: 'M PLUS Rounded 1c';
     padding: 0px;
     cursor: url('cursor.cur'), auto;
+    background-color: rgb(3, 1, 17);
+
+
 }
 
 object {
@@ -27,8 +30,9 @@ canvas{
 }
 
 body{
+    
     margin: 0;
-    background-color: rgba(44, 17, 214, 0.596);
+    background-color: rgb(44, 17, 214);
     position: relative;
     z-index: 1;
 }
@@ -70,6 +74,10 @@ header{
     height:  10vh;
     padding-top: 10px;
     width: 100%;    
+}
+.exclude{
+    background-color: rgb(3, 1, 17);
+
 }
 .navbar{
     background-color: rgb(3, 1, 17);

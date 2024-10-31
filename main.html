@@ -8,34 +8,66 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Play:wght@400;700&display=swap" rel="stylesheet">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
     <link rel="stylesheet" href="mainstyle.css">
     <link rel="stylesheet" href="styles-phone.css" media="only screen and (max-width: 600px)">
 
     <title>CV Bruno Almeida</title>
 </head>
 <body>
-    <object type="text/html" data="background.html" style="width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: -1;"></object>
-    
     <header>
-        <div class="fstLine">
-            <h1 class="titulo" data-en="CV Bruno Almeida" data-pt="CV Bruno Almeida">CV Bruno Almeida</h1>
-            <div class="right">
-                <select id="langSelect" class="lang-select">
-                    <option value="pt">Português</option>
-                    <option value="en">English</option>
-                </select>       
-                <button class="download-button" onclick="downloadPDF()">Download PDF</button>
+        <div id="exclude">
+       
+            <div class="fstLine">
+                <h1 class="titulo" data-en="CV Bruno Almeida" data-pt="CV Bruno Almeida">CV Bruno Almeida</h1>
+                <div class="right">
+                    <select id="langSelect" class="lang-select">
+                        <option value="pt">Português</option>
+                        <option value="en">English</option>
+                    </select>       
+                    <button class="download-button" onclick="saveAsPDF()"">Download PDF</button>
+                </div>
             </div>
+            <div class="navbar">
+                <div class="navbeacon"><a href="#cont" class="button" data-en="Contacts" data-pt="Contactos">Contactos</a></div>
+                <div class="navbeacon"><a href="#edu" class="button" data-en="Education" data-pt="Educação">Educação</a></div>
+                <div class="navbeacon"><a href="#exppro" class="button" data-en="Professional Experience" data-pt="Experiência Profissional">Experiência Profissional</a></div>
+                <div class="navbeacon"><a href="#comp" class="button" data-en="Skills" data-pt="Competências">Competências</a></div>
+                <div class="navbeacon"><a href="#info" class="button" data-en="Other Information" data-pt="Outras Informações">Outras Informações</a></div>
+            </div>
+            <hr>
+        
         </div>
-        <div class="navbar">
-            <div class="navbeacon"><a href="#cont" class="button" data-en="Contacts" data-pt="Contactos">Contactos</a></div>
-            <div class="navbeacon"><a href="#edu" class="button" data-en="Education" data-pt="Educação">Educação</a></div>
-            <div class="navbeacon"><a href="#exppro" class="button" data-en="Professional Experience" data-pt="Experiência Profissional">Experiência Profissional</a></div>
-            <div class="navbeacon"><a href="#comp" class="button" data-en="Skills" data-pt="Competências">Competências</a></div>
-            <div class="navbeacon"><a href="#info" class="button" data-en="Other Information" data-pt="Outras Informações">Outras Informações</a></div>
-        </div>
-        <hr>
     </header>
+    <!-- Button to trigger PDF generation -->
+
+    <script>
+        function saveAsPDF() {
+            // Select the element to exclude
+            const excludeElement = document.getElementById("exclude");
+
+            // Temporarily hide the element to exclude
+            excludeElement.style.display = "none";
+
+            // Configure and call html2pdf
+            html2pdf()
+                .set({
+                    margin: 0,
+                    filename: 'CV_Bruno_Almeida.pdf',
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { scale: 3 },
+                    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+                })
+                .from(document.body) // Use the full body as the PDF content
+                .save()
+                .finally(() => {
+                    // Restore the excluded element's visibility after the PDF is generated
+                    excludeElement.style.display = "";
+                });
+        }
+    </script>
+    
 
     <div id="cont" class="section">
         <h1 data-en="Contacts" data-pt="Contactos">Contactos</h1>
@@ -66,6 +98,11 @@
             Design e administração de bases de dados e de redes informáticas <br>
         </p>
         <h4 data-en="Final Grade 18/20" data-pt="Classificação final 18/20">Classificação final 18/20</h4>
+        <br>
+
+        <h3 data-en="WEBDESIGN COURSE from IEFP" data-pt="CURSO DE WEBDESIGN do IEFP">
+            CURSO DE WEBDESIGN do IEFP 
+        </h3>
     </div>
 
     <div id="exppro" class="section">
